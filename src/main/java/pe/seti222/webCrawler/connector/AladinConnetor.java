@@ -221,7 +221,9 @@ public class AladinConnetor {
         idx = str.indexOf("<span",idx);
         idx = str.indexOf(">",idx);
         endIdx = str.indexOf("</span>",idx);
+        try{
         info.setSalePrice(Integer.parseInt(str.substring(idx+1,endIdx).replace(",", "")));
+        }catch(NumberFormatException e){}
        
 	}
 }

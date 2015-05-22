@@ -25,7 +25,11 @@ public class OrderInfo {
 		this.price = price;
 	}
 	public void setPrice(String s) {
-		this.price = Integer.parseInt(s);
+		try {
+			this.price = Integer.parseInt(s);
+		}catch(Exception e){
+			this.price =0;
+		}
 	}
 	public int getSalePrice() {
 		return salePrice;
